@@ -15,8 +15,11 @@ const Header = () => {
   };
 
   return (
-    <div className=" w-full h-20 bg-[#032541] flex items-center px-10 gap-5 sm:gap-20">
-      <div className=" cursor-pointer" onClick={() => navigate("/")}>
+    <div className=" w-full h-20 bg-[#032541] flex items-center px-10 gap-2 sm:gap-20">
+      <div
+        className="hidden sm:block cursor-pointer"
+        onClick={() => navigate("/")}
+      >
         <img
           className=" w-20 sm:w-40 cursor-pointer"
           src={Logo}
@@ -30,7 +33,7 @@ const Header = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search for a movie..."
-          className=" border-none outline-none flex-1 rounded-[30px] px-5"
+          className=" border-none outline-none flex-1 rounded-[30px] px-2"
         />
         <button
           onClick={handleClick}
