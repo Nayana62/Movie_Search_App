@@ -33,7 +33,7 @@ const MovieList = ({ title, fetchUrl }) => {
   }, [fetchUrl]);
 
   return (
-    <div className="px-10 py-8">
+    <div className=" px:5 sm:px-10 py-4 sm:py-8">
       <h2 className="font-semibold text-xl ml-12">{title}</h2>
       {loading ? (
         <div></div>
