@@ -11,12 +11,10 @@ Welcome to the Movie Search App! This React application allows users to search f
 - [API Integration](#api-integration)
 - [Code Structure](#code-structure)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
-You can check out a live demo of the Movie Search App here [Demo Link](#).
+You can check out a live demo of the Movie Search App here [Demo Link](https://movie-search-app-nayana62.vercel.app/).
 
 ## Features
 
