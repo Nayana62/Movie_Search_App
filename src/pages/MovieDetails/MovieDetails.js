@@ -48,7 +48,7 @@ const MovieDetails = () => {
       ) : (
         <div className=" text-white h-[calc(100vh-5rem)] bg-blue-400">
           {error === "" ? (
-            <div className="flex gap-10  h-full items-center justify-center">
+            <div className="flex flex-col sm:flex-row  gap-10  h-full items-center justify-center">
               <div className="w-[330px] h-[480px] rounded-xl">
                 <img
                   src={`${base_url}${movie.poster_path}`}
@@ -57,8 +57,8 @@ const MovieDetails = () => {
                   className=" w-full h-full rounded-2xl object-contain"
                 />
               </div>
-              <div className="w-[900px]">
-                <div className="flex gap-2 items-end">
+              <div className=" w-80 sm:w-[900px]">
+                <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-end">
                   <h2 className=" text-4xl font-bold">
                     {movie?.title || movie?.name}
                   </h2>
