@@ -11,8 +11,6 @@ Welcome to the Movie Search App! This React application allows users to search f
 - [API Integration](#api-integration)
 - [Code Structure](#code-structure)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
