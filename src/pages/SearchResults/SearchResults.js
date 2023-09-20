@@ -81,7 +81,7 @@ const SearchResults = () => {
                         {movie.title || movie.name}
                       </h2>
                       <p className=" text-gray-600">{movie.release_date}</p>
-                      <p className=" text-sm mt-3 ">
+                      <p className=" hidden sm:block text-sm mt-3 ">
                         {truncateText(movie.overview, 390)}
                       </p>
                     </div>
