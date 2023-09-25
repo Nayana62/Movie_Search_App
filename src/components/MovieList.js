@@ -3,6 +3,7 @@ import axios from "../axios";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setMovieId } from "../redux/actions/movieActions";
+import default_img from "../assets/default_image_01.png";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -48,6 +49,10 @@ const MovieList = ({ title, fetchUrl }) => {
                 alt={movie.name}
                 loading="lazy"
                 className="w-[150px] h-[225px] rounded-xl mx-2 object-contain cursor-pointer hover:scale-110 transition-all"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = default_img;
+                }}
               />
             );
           })}

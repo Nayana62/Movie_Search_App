@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../../axios";
 import { useSelector } from "react-redux";
 import Header from "../../components/Header";
-import { truncateText } from "../../components/TruncateText";
+import default_img from "../../assets/default_image_01.png";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -50,12 +50,16 @@ const MovieDetails = () => {
         <div className=" text-white h-[calc(100vh-5rem)] min-h-full bg-blue-400">
           {error === "" ? (
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-10  h-full items-center justify-center py-10 sm:py-2">
-              <div className=" w-[250px] sm:w-[330px] h-[350px] sm:h-[480px] rounded-xl">
+              <div className=" w-[250px] sm:w-[330px] h-[250px] sm:h-[480px] mt-10 rounded-xl">
                 <img
                   src={`${base_url}${movie.poster_path}`}
                   alt={movie.name}
                   loading="lazy"
                   className=" w-full h-full rounded-2xl object-contain"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = default_img;
+                  }}
                 />
               </div>
               <div className=" w-80 sm:w-[900px]">
